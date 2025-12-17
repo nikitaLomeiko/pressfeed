@@ -466,6 +466,8 @@ em {
   }
 }
 
+// BENEFITS
+
 .benefits {
   padding: 140px 0;
   &__inner {
@@ -512,6 +514,147 @@ em {
         }
       }
     }
+  }
+}
+
+// BUY-SERVICES
+
+.buy-service {
+  padding-bottom: 107px;
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 50px;
+
+    h2 {
+      font-weight: 800;
+      font-size: 50px;
+      line-height: 60px;
+      letter-spacing: 0.5%;
+      text-align: center;
+    }
+
+    .btn {
+      width: 100%;
+      max-width: 310px;
+      padding: 14px 56px;
+      margin: 0 auto;
+      font-weight: 600;
+      font-size: 20px;
+      line-height: 30px;
+      letter-spacing: 0%;
+      text-align: center;
+      vertical-align: middle;
+    }
+  }
+}
+
+// FOOTER
+
+.footer {
+  background-color: $bg-secondary;
+  padding: 40px 0 32px 0;
+  &__part {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-align: center;
+  }
+
+  .contact__list {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+    margin: 0 auto;
+    width: fit-content;
+    padding-bottom: 40px;
+
+    .contact__link {
+      display: flex;
+      flex-direction: row;
+      gap: 4px;
+      justify-content: center;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 172%;
+      letter-spacing: 0%;
+      color: rgba(59, 59, 59, 1);
+      align-items: center;
+    }
+
+    .contact__link.watsapp {
+      background: rgba(86, 205, 108, 1);
+      font-size: 14px;
+      padding: 7px 13px;
+      color: #fff;
+      border-radius: 4px;
+      transition: background $transition-delay--long ease;
+    }
+
+    .contact__link.watsapp:hover {
+      background: rgb(91, 226, 116);
+    }
+
+    .contact__link.telegram {
+      background: rgba(97, 168, 222, 1);
+      font-size: 14px;
+      padding: 7px 13px;
+      color: #fff;
+      border-radius: 4px;
+      transition: background $transition-delay--long ease;
+    }
+
+    .contact__link.telegram:hover {
+      background: rgb(123, 196, 252);
+    }
+  }
+
+  .social__list {
+    margin-top: 32px;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+    margin: 0 auto;
+    width: fit-content;
+
+    .social__link {
+      margin-top: 32px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: rgba(185, 194, 211, 1);
+      border-radius: 100%;
+      width: 32px;
+      height: 32px;
+      transition: background $transition-delay--long ease;
+    }
+
+    .social__link.vk:hover {
+      background-color: rgb(49, 49, 252);
+    }
+    .social__link.telegram:hover {
+      background-color: rgb(60, 119, 245);
+    }
+    .social__link.youtube:hover {
+      background-color: rgb(250, 35, 35);
+    }
+    .social__link.dzen:hover {
+      background-color: #333333;
+    }
+  }
+
+  .downloads {
+    margin: 0 auto;
   }
 }
 
