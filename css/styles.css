@@ -1,3 +1,11 @@
+*,
+*::before,
+*:active {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   background-color: #ffffff;
@@ -46,8 +54,19 @@ em {
   font-style: normal;
 }
 
+.devider {
+  width: 100%;
+  border: 1px solid rgb(207, 215, 231);
+}
+
+.devider.vertical {
+  width: 1px;
+}
+
 .header {
   height: 72px;
+  display: flex;
+  align-items: center;
 }
 .header__inner {
   display: flex;
@@ -149,7 +168,7 @@ em {
   width: 100%;
   max-width: 310px;
   margin-top: 50px;
-  font-size: 30px;
+  font-size: 20px;
   padding: 14px 56px;
 }
 .intro__demo {
@@ -199,6 +218,176 @@ em {
 }
 .work__inner img {
   margin-top: 20px;
+}
+
+.target-auditory {
+  background-color: rgb(242, 245, 251);
+  padding: 140px 0;
+}
+.target-auditory__inner {
+  position: relative;
+}
+.target-auditory__inner .deco-img {
+  position: absolute;
+  top: 20px;
+  right: -85px;
+}
+.target-auditory__inner h2 {
+  font-weight: 800;
+  font-size: 50px;
+  line-height: 60px;
+  letter-spacing: 0.5%;
+}
+.target-auditory__inner .professional-card__list {
+  margin-top: 50px;
+  position: relative;
+  z-index: 10;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+.target-auditory__inner .professional-card__list .professional-card__item {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 25px 25px 50px 0px rgba(0, 0, 0, 0.07);
+  border-radius: 3px;
+  padding: 40px;
+  width: 100%;
+  max-width: 370px;
+}
+.target-auditory__inner .professional-card__list .professional-card__item img {
+  width: 70px;
+  height: 70px;
+}
+.target-auditory__inner .professional-card__list .professional-card__item span {
+  font-weight: 600;
+  font-size: 26px;
+  line-height: 34px;
+  letter-spacing: 0%;
+}
+.target-auditory__inner .professional-card__list .professional-card__item:nth-child(4) {
+  grid-column: 1/span 3;
+  max-width: 100%;
+}
+
+.function {
+  background-color: rgb(242, 245, 251);
+  padding-bottom: 140px;
+}
+.function__inner {
+  position: relative;
+}
+.function__inner h2 {
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto;
+  font-weight: 800;
+  font-size: 50px;
+  line-height: 60px;
+  letter-spacing: 0.5%;
+}
+.function__inner .deco-img {
+  position: absolute;
+  left: -90px;
+  bottom: -90px;
+}
+.function__content {
+  position: relative;
+  z-index: 10;
+  margin-top: 50px;
+  flex: row;
+  flex-direction: column;
+  background-color: #ffffff;
+  box-shadow: 25px 25px 50px 0px rgba(0, 0, 0, 0.07);
+  border-radius: 3px;
+  padding: 50px 70px;
+}
+.function__content h3 {
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 34px;
+  letter-spacing: 0%;
+  text-align: center;
+  margin: 44px 0;
+}
+.function__content__element {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.function__content__element .function__part {
+  width: 100%;
+  max-width: 430px;
+}
+.function__content__element .function__part h3 {
+  margin: 0;
+}
+.function__content__element .function__part .function__list {
+  margin-top: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.function__content__element .function__part .function__list .function__item {
+  display: flex;
+  flex-direction: row;
+  align-items: start;
+  gap: 6px;
+}
+.function__content__element .function__part .function__list .function__item p {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0%;
+}
+.function__content__element .function__part .function__label {
+  display: inline-block;
+  margin-top: 22px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0%;
+  color: rgb(151, 151, 151);
+}
+.function__content__element .function__part .function__text {
+  display: block;
+  margin: 18px auto;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0%;
+  text-align: center;
+  color: rgb(59, 59, 59);
+}
+.function__content__element .function__part .function__rates {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.function__content__element .function__part .function__rates__item {
+  display: flex;
+  flex-direction: column;
+}
+.function__content__element .function__part .function__rates__item .rate__title {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0%;
+  text-align: center;
+  color: rgb(59, 59, 59);
+}
+.function__content__element .function__part .function__rates__item .rate__price {
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 30px;
+  letter-spacing: 0%;
+  text-align: center;
+  color: rgb(59, 59, 59);
+}
+.function__content__element .function__part:nth-child(3) .function__list {
+  margin-top: 22px;
 }
 
 @keyframes giftJump {

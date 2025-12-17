@@ -1,3 +1,11 @@
+*,
+*::before,
+*:active {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 $primary-color: rgba(38, 38, 38, 1);
 $acent-color: rgba(64, 84, 249, 1);
 $acent-color--hover: rgb(93, 108, 247);
@@ -57,10 +65,21 @@ em {
   font-style: normal;
 }
 
+.devider {
+  width: 100%;
+  border: 1px solid rgba(207, 215, 231, 1);
+}
+
+.devider.vertical {
+  width: 1px;
+}
+
 // HEADER
 
 .header {
   height: 72px;
+  display: flex;
+  align-items: center;
 
   &__inner {
     display: flex;
@@ -179,7 +198,7 @@ em {
       width: 100%;
       max-width: 310px;
       margin-top: 50px;
-      font-size: 30px;
+      font-size: 20px;
       padding: 14px 56px;
     }
   }
@@ -240,6 +259,209 @@ em {
 
     img {
       margin-top: 20px;
+    }
+  }
+}
+
+// TARGET-AUDIETORY
+
+.target-auditory {
+  background-color: $bg-secondary;
+  padding: 140px 0;
+
+  &__inner {
+    position: relative;
+
+    .deco-img {
+      position: absolute;
+      top: 20px;
+      right: -85px;
+    }
+
+    h2 {
+      font-weight: 800;
+      font-size: 50px;
+      line-height: 60px;
+      letter-spacing: 0.5%;
+    }
+
+    .professional-card__list {
+      margin-top: 50px;
+      position: relative;
+      z-index: 10;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+
+      .professional-card__item {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        background-color: rgba(255, 255, 255, 1);
+        box-shadow: 25px 25px 50px 0px rgba(0, 0, 0, 0.07);
+        border-radius: 3px;
+        padding: 40px;
+        width: 100%;
+        max-width: 370px;
+
+        img {
+          width: 70px;
+          height: 70px;
+        }
+        span {
+          font-weight: 600;
+          font-size: 26px;
+          line-height: 34px;
+          letter-spacing: 0%;
+        }
+      }
+
+      .professional-card__item:nth-child(4) {
+        grid-column: 1 / span 3;
+        max-width: 100%;
+      }
+    }
+  }
+}
+
+// FUNCTION
+
+.function {
+  background-color: $bg-secondary;
+  padding-bottom: 140px;
+
+  &__inner {
+    position: relative;
+
+    h2 {
+      width: fit-content;
+      margin: 0 auto;
+      font-weight: 800;
+      font-size: 50px;
+      line-height: 60px;
+      letter-spacing: 0.5%;
+    }
+
+    .deco-img {
+      position: absolute;
+      left: -90px;
+      bottom: -90px;
+    }
+  }
+
+  &__content {
+    position: relative;
+    z-index: 10;
+
+    margin-top: 50px;
+    flex: row;
+    flex-direction: column;
+
+    background-color: #ffffff;
+    box-shadow: 25px 25px 50px 0px rgba(0, 0, 0, 0.07);
+    border-radius: 3px;
+    padding: 50px 70px;
+
+    h3 {
+      font-weight: 700;
+      font-size: 26px;
+      line-height: 34px;
+      letter-spacing: 0%;
+      text-align: center;
+      margin: 44px 0;
+    }
+
+    &__element {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+
+      .function__part {
+        width: 100%;
+        max-width: 430px;
+
+        h3 {
+          margin: 0;
+        }
+
+        .function__list {
+          margin-top: 32px;
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+
+          .function__item {
+            display: flex;
+            flex-direction: row;
+            align-items: start;
+            gap: 6px;
+
+            p {
+              font-weight: 500;
+              font-size: 16px;
+              line-height: 24px;
+              letter-spacing: 0%;
+            }
+          }
+        }
+
+        .function__label {
+          display: inline-block;
+          margin-top: 22px;
+          font-weight: 500;
+          font-size: 16px;
+          line-height: 24px;
+          letter-spacing: 0%;
+
+          color: rgba(151, 151, 151, 1);
+        }
+
+        .function__text {
+          display: block;
+          margin: 18px auto;
+          font-weight: 500;
+          font-size: 16px;
+          line-height: 24px;
+          letter-spacing: 0%;
+          text-align: center;
+          color: rgba(59, 59, 59, 1);
+        }
+
+        .function__rates {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+
+          &__item {
+            display: flex;
+            flex-direction: column;
+
+            .rate__title {
+              font-weight: 500;
+              font-size: 16px;
+              line-height: 24px;
+              letter-spacing: 0%;
+              text-align: center;
+              color: rgba(59, 59, 59, 1);
+            }
+
+            .rate__price {
+              font-weight: 500;
+              font-size: 22px;
+              line-height: 30px;
+              letter-spacing: 0%;
+              text-align: center;
+              color: rgba(59, 59, 59, 1);
+            }
+          }
+        }
+      }
+
+      .function__part:nth-child(3) {
+        .function__list {
+          margin-top: 22px;
+        }
+      }
     }
   }
 }
