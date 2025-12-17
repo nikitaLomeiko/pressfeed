@@ -390,6 +390,49 @@ em {
   margin-top: 22px;
 }
 
+.benefits {
+  padding: 140px 0;
+}
+.benefits__inner {
+  display: flex;
+  flex-direction: column;
+}
+.benefits__inner h2 {
+  font-weight: 800;
+  font-size: 50px;
+  line-height: 60px;
+  letter-spacing: 0.5%;
+}
+.benefits__inner .benefits__list {
+  margin-top: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 50px;
+}
+.benefits__inner .benefits__list .benefits__item {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 352px;
+}
+.benefits__inner .benefits__list .benefits__item__count {
+  font-weight: 700;
+  font-size: 46px;
+  line-height: 54px;
+  letter-spacing: 0%;
+  color: rgb(64, 84, 249);
+}
+.benefits__inner .benefits__list .benefits__item__descr {
+  margin-top: 26px;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 30px;
+  letter-spacing: 0%;
+}
+.benefits__inner .benefits__list .benefits__item .devider {
+  margin-top: 20px;
+}
+
 @keyframes giftJump {
   0% {
     transform: translateY(0) rotate(0);
