@@ -65,7 +65,10 @@
         <div class="container">
           <div class="intro__inner">
             <div data-aos="fade-right" class="intro__content">
-              <h2><em>Куратор</em> по работе с сервисом Pressfeed</h2>
+              <h2>
+                <em class="glow-text" data-glow>Куратор</em> по работе с
+                сервисом Pressfeed
+              </h2>
               <a class="btn" href="#">Узнать подробнее</a>
             </div>
             <div data-aos="fade-down-left" class="intro__demo">
@@ -91,8 +94,10 @@
             <h2 data-aos="zoom-in-down">Как это работает?</h2>
             <p data-aos="zoom-in-down">
               В рамках работы с профессиональным аккаунтом Pressfeed вы можете
-              выбрать помощь <em>менеджера по сопровождению,</em> или
-              <em>куратора</em>
+              выбрать помощь
+              <em class="glow-text" data-glow>менеджера по сопровождению,</em>
+              или
+              <em class="glow-text" data-glow>куратора</em>
             </p>
             <img
               data-aos="zoom-in"
@@ -116,7 +121,7 @@
               data-aos-duration="1500"
             >
               Кому может потребоваться <br />
-              <em>помощь куратора?</em>
+              <em class="glow-text" data-glow>помощь куратора?</em>
             </h2>
             <div class="professional-cards">
               <ul class="professional-card__list">
@@ -164,7 +169,9 @@
       <section class="function">
         <div class="container">
           <div class="function__inner">
-            <h2 data-aos="fade-up"><em>Функции</em> менеджеров</h2>
+            <h2 data-aos="fade-up">
+              <em class="glow-text" data-glow>Функции</em> менеджеров
+            </h2>
             <div
               data-aos="fade-up"
               data-aos-duration="3000"
@@ -270,13 +277,15 @@
                     <div class="function__rates__item">
                       <span class="rate__title">На тарифе «Эксперт»</span>
                       <span class="rate__price"
-                        >+ <s>4990</s> <em>2990 ₽/мес.</em></span
+                        >+ <s>4990</s>
+                        <em class="glow-text" data-glow>2990 ₽/мес.</em></span
                       >
                     </div>
                     <div class="function__rates__item">
                       <span class="rate__title">На тарифе «Компания»</span>
                       <span class="rate__price"
-                        >+ <s>6990</s> <em>4990 ₽/мес.</em></span
+                        >+ <s>6990</s>
+                        <em class="glow-text" data-glow>4990 ₽/мес.</em></span
                       >
                     </div>
                   </div>
@@ -295,7 +304,7 @@
         <div class="container">
           <div class="benefits__inner">
             <h2 data-aos="fade-right">
-              В чём <em>выгода работы</em> <br />
+              В чём <em class="glow-text" data-glow>выгода работы</em> <br />
               с куратором
             </h2>
             <ul class="benefits__list">
@@ -350,7 +359,7 @@
           <div class="buy-service__inner">
             <h2>
               Подключайтесь к
-              <em
+              <em class="glow-text" data-glow
                 >работе <br />
                 с куратором</em
               >
@@ -483,5 +492,24 @@
   <script>
     // Accepts any class name
     var rellax = new Rellax(".rellax", {});
+  </script>
+
+  <script>
+    function makeGlow(element) {
+      const content = element.textContent;
+      let html = "";
+
+      for (let char of content) {
+        if (char === " ") {
+          html += " ";
+        } else {
+          html += `<span>${char}</span>`;
+        }
+      }
+
+      element.innerHTML = html;
+    }
+
+    document.querySelectorAll("[data-glow]").forEach(makeGlow);
   </script>
 </html>

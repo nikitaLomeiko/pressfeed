@@ -121,10 +121,24 @@ input[type=checkbox]:checked + .dropbtn + .dropdown-content {
   color: black;
 }
 
-.dropdown-content a:hover {
-  background: #f1f1f1;
+.glow-text span {
+  display: inline;
+  transition: all 0.3s ease;
+  cursor: default;
 }
 
+.glow-text span:hover {
+  animation: glow 1.8s ease-out;
+}
+
+@keyframes glow {
+  0% {
+    text-shadow: 0 0 5px rgb(64, 84, 249), 0 0 10px rgb(64, 84, 249), 0 0 20px rgb(64, 84, 249), 0 0 30px rgb(64, 84, 249);
+  }
+  100% {
+    text-shadow: 0 0 10px rgb(64, 84, 249), 0 0 20px rgb(64, 84, 249), 0 0 30px rgb(64, 84, 249), 0 0 40px rgb(64, 84, 249);
+  }
+}
 .header {
   height: 72px;
   display: flex;
@@ -260,8 +274,6 @@ input[type=checkbox]:checked + .dropbtn + .dropdown-content {
 .work {
   padding: 140px 0;
   background-color: #ffffff;
-  position: relative;
-  z-index: 20;
 }
 .work__inner h2 {
   font-weight: 800;
