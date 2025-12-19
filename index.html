@@ -4,11 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Pressfeed</title>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="./css/styles.css" />
     <link rel="stylesheet" href="./css/normalize.css" />
   </head>
   <body>
-    <header class="header">
+    <header data-aos="fade-down" class="header">
       <div class="container">
         <div class="header__inner">
           <a class="logo" href="#">
@@ -60,14 +61,14 @@
       </div>
     </header>
     <main>
-      <section class="intro">
+      <section class="intro rellax" data-rellax-speed="8">
         <div class="container">
           <div class="intro__inner">
-            <div class="intro__content">
+            <div data-aos="fade-right" class="intro__content">
               <h2><em>Куратор</em> по работе с сервисом Pressfeed</h2>
               <a class="btn" href="#">Узнать подробнее</a>
             </div>
-            <div class="intro__demo">
+            <div data-aos="fade-down-left" class="intro__demo">
               <div class="intro__demo__inner">
                 <img
                   class="deco-img"
@@ -87,13 +88,17 @@
       <section class="work">
         <div class="container">
           <div class="work__inner">
-            <h2>Как это работает?</h2>
-            <p>
+            <h2 data-aos="zoom-in-down">Как это работает?</h2>
+            <p data-aos="zoom-in-down">
               В рамках работы с профессиональным аккаунтом Pressfeed вы можете
               выбрать помощь <em>менеджера по сопровождению,</em> или
               <em>куратора</em>
             </p>
-            <img src="./aseets/img/demo/demo1.png" alt="demo" />
+            <img
+              data-aos="zoom-in"
+              src="./aseets/img/demo/demo1.png"
+              alt="demo"
+            />
           </div>
         </div>
       </section>
@@ -105,25 +110,45 @@
               src="./aseets/img/deco/deco2.png"
               alt="decor"
             />
-            <h2>
+            <h2
+              data-aos="fade-down"
+              data-aos-easing="linear"
+              data-aos-duration="1500"
+            >
               Кому может потребоваться <br />
               <em>помощь куратора?</em>
             </h2>
             <div class="professional-cards">
               <ul class="professional-card__list">
-                <li class="professional-card__item">
+                <li
+                  data-aos="fade-right"
+                  data-aos-offset="300"
+                  data-aos-easing="ease-in-sine"
+                  class="professional-card__item"
+                >
                   <img src="./aseets/img/other/bag.png" alt="businessmen" />
                   <span>Собственнику бизнеса</span>
                 </li>
-                <li class="professional-card__item">
+                <li
+                  data-aos="fade-down"
+                  data-aos-easing="linear"
+                  data-aos-duration="1500"
+                  class="professional-card__item"
+                >
                   <img src="./aseets/img/other/speaker.png" alt="marketolog" />
                   <span>Маркетологу</span>
                 </li>
-                <li class="professional-card__item">
+                <li
+                  data-aos="fade-left"
+                  data-aos-anchor="#example-anchor"
+                  data-aos-offset="500"
+                  data-aos-duration="500"
+                  class="professional-card__item"
+                >
                   <img src="./aseets/img/other/person.png" alt="person" />
                   <span>Частному эксперту</span>
                 </li>
-                <li class="professional-card__item">
+                <li data-aos="zoom-out-up" class="professional-card__item">
                   <img src="./aseets/img/other/meeting.png" alt="meeting" />
                   <span
                     >Другим экспертам, чья профессиональная деятельность
@@ -139,8 +164,12 @@
       <section class="function">
         <div class="container">
           <div class="function__inner">
-            <h2><em>Функции</em> менеджеров</h2>
-            <div class="function__content">
+            <h2 data-aos="fade-up"><em>Функции</em> менеджеров</h2>
+            <div
+              data-aos="fade-up"
+              data-aos-duration="3000"
+              class="function__content"
+            >
               <div class="function__content__element">
                 <div class="function__part">
                   <h3>
@@ -265,12 +294,12 @@
       <section class="benefits">
         <div class="container">
           <div class="benefits__inner">
-            <h2>
+            <h2 data-aos="fade-right">
               В чём <em>выгода работы</em> <br />
               с куратором
             </h2>
             <ul class="benefits__list">
-              <li class="benefits__item">
+              <li data-aos="fade-down-right" class="benefits__item">
                 <span class="benefits__item__count">01.</span>
                 <div class="devider"></div>
                 <p class="benefits__item__descr">
@@ -278,7 +307,7 @@
                   на Pressfeed под ваши задачи
                 </p>
               </li>
-              <li class="benefits__item">
+              <li data-aos="fade-down-right" class="benefits__item">
                 <span class="benefits__item__count">02.</span>
                 <div class="devider"></div>
                 <p class="benefits__item__descr">
@@ -286,7 +315,7 @@
                   публикаций – куратор заранее всё уточнит
                 </p>
               </li>
-              <li class="benefits__item">
+              <li data-aos="fade-down-left" class="benefits__item">
                 <span class="benefits__item__count">03.</span>
                 <div class="devider"></div>
                 <p class="benefits__item__descr">
@@ -294,7 +323,7 @@
                   <strong> сможете получать больше публикаций</strong>
                 </p>
               </li>
-              <li class="benefits__item">
+              <li data-aos="fade-up-right" class="benefits__item">
                 <span class="benefits__item__count">04.</span>
                 <div class="devider"></div>
                 <p class="benefits__item__descr">
@@ -303,7 +332,7 @@
                   публикации
                 </p>
               </li>
-              <li class="benefits__item">
+              <li data-aos="fade-down-left" class="benefits__item">
                 <span class="benefits__item__count">05.</span>
                 <div class="devider"></div>
                 <p class="benefits__item__descr">
@@ -327,12 +356,22 @@
               >
               прямо сейчас!
             </h2>
-            <a class="btn" href="#">Оформить услугу</a>
+            <a
+              data-aos="fade-up"
+              data-aos-anchor-placement="top-bottom"
+              class="btn"
+              href="#"
+              >Оформить услугу</a
+            >
           </div>
         </div>
       </section>
     </main>
-    <footer class="footer">
+    <footer
+      data-aos="fade-up"
+      data-aos-anchor-placement="top-bottom"
+      class="footer"
+    >
       <div class="container">
         <div class="footer__part">
           <h4 class="footer__title">Задайте нам вопрос</h4>
@@ -420,4 +459,29 @@
       </div>
     </footer>
   </body>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      AOS.init({
+        offset: 120,
+        duration: 1500,
+        threshold: 0.25,
+        once: false,
+        easing: "ease-out",
+      });
+    });
+  </script>
+
+  <script src="https://unpkg.com/lenis@1.3.3/dist/lenis.min.js"></script>
+  <script>
+    const lenis = new Lenis({
+      autoRaf: true,
+    });
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/gh/dixonandmoe/rellax@master/rellax.min.js"></script>
+  <script>
+    // Accepts any class name
+    var rellax = new Rellax(".rellax", {});
+  </script>
 </html>

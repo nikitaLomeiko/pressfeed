@@ -129,6 +129,10 @@ input[type=checkbox]:checked + .dropbtn + .dropdown-content {
   height: 72px;
   display: flex;
   align-items: center;
+  position: sticky;
+  background-color: #ffffff;
+  top: 0;
+  z-index: 20;
 }
 .header__inner {
   display: flex;
@@ -255,6 +259,9 @@ input[type=checkbox]:checked + .dropbtn + .dropdown-content {
 
 .work {
   padding: 140px 0;
+  background-color: #ffffff;
+  position: relative;
+  z-index: 20;
 }
 .work__inner h2 {
   font-weight: 800;
@@ -653,8 +660,4 @@ input[type=checkbox]:checked + .dropbtn + .dropdown-content {
   100% {
     transform: translateX(100%) rotate(45deg);
   }
-}
-body {
-  border: 2px solid red;
-  height: 100%;
 }/*# sourceMappingURL=styles.css.map */

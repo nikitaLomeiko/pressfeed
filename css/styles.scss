@@ -141,6 +141,10 @@ input[type="checkbox"]:checked + .dropbtn + .dropdown-content {
   height: 72px;
   display: flex;
   align-items: center;
+  position: sticky;
+  background-color: $bg-primary;
+  top: 0;
+  z-index: 20;
 
   &__inner {
     display: flex;
@@ -292,6 +296,9 @@ input[type="checkbox"]:checked + .dropbtn + .dropdown-content {
 
 .work {
   padding: 140px 0;
+  background-color: $bg-primary;
+  position: relative;
+  z-index: 20;
 
   &__inner {
     h2 {
@@ -755,9 +762,4 @@ input[type="checkbox"]:checked + .dropbtn + .dropdown-content {
   100% {
     transform: translateX(100%) rotate(45deg);
   }
-}
-
-body {
-  border: 2px solid red;
-  height: 100%;
 }
