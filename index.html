@@ -4,19 +4,86 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Pressfeed</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://learn.microsoft.com/en-us/typography/font-list/segoe-ui"
+    />
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="./css/styles.css" />
     <link rel="stylesheet" href="./css/normalize.css" />
   </head>
   <body>
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar__header">
+        <button class="sidebar__close" id="sidebarClose">
+          <img src="./aseets/icon/cross.svg" alt="close" />
+        </button>
+        <a class="logo" href="#">
+          <img src="./aseets/img/pressfeed.png" alt="logotype" />
+        </a>
+      </div>
+
+      <nav class="sidebar__nav">
+        <ul class="sidebar__list">
+          <li class="sidebar__item">
+            <a class="sidebar__link" href="#">Журналистам</a>
+          </li>
+          <li class="sidebar__item">
+            <a class="sidebar__link" href="#">Экспертам</a>
+          </li>
+          <li class="sidebar__item">
+            <a class="sidebar__link" href="#">Тарифы</a>
+          </li>
+          <li class="sidebar__item">
+            <div class="sidebar__dropdown">
+              <button class="sidebar__dropdown-btn">Ресурсы</button>
+              <div class="sidebar__dropdown-content">
+                <a href="#">Ресурс 1</a>
+                <a href="#">Ресурс 2</a>
+                <a href="#">Ресурс 3</a>
+              </div>
+            </div>
+          </li>
+          <li class="sidebar__item">
+            <a class="sidebar__link" href="#">Академия</a>
+          </li>
+          <li class="sidebar__item">
+            <a class="sidebar__link selected" href="#">Сделать все за меня</a>
+          </li>
+        </ul>
+
+        <div class="sidebar__contacts">
+          <a class="contact__link" href="tel:74951208019">
+            <img src="./aseets/icon/contacts/call.svg" alt="phone" />
+            <span>+7 (495) 120-80-19</span>
+          </a>
+        </div>
+      </nav>
+    </aside>
     <header data-aos="fade-down" class="header">
       <div class="container">
         <div class="header__inner">
-          <a class="logo" href="#">
-            <h1>
-              <img src="./aseets/img/pressfeed.png" alt="logotype" />
-            </h1>
-          </a>
+          <div class="header__left">
+            <button class="burger-menu">
+              <img src="./aseets/icon/menu.svg" alt="menu" />
+            </button>
+            <a class="logo" href="#">
+              <h1>
+                <img src="./aseets/img/pressfeed.png" alt="logotype" />
+              </h1>
+            </a>
+            <a class="gift-link mobile" href="#">
+              <span class="gift-count">1</span>
+              <img src="./aseets/icon/gift.svg" alt="gift" />
+            </a>
+          </div>
           <nav class="nav">
             <ul class="nav__list">
               <li class="nav__item">
@@ -48,7 +115,7 @@
             </ul>
           </nav>
           <div class="header__right">
-            <a class="gift-link" href="#">
+            <a class="gift-link desktop" href="#">
               <span class="gift-count">1</span>
               <img src="./aseets/icon/gift.svg" alt="gift" />
             </a>
@@ -66,8 +133,8 @@
           <div class="intro__inner">
             <div data-aos="fade-right" class="intro__content">
               <h2>
-                <em class="glow-text" data-glow>Куратор</em> по работе с
-                сервисом Pressfeed
+                <em class="glow-text" data-glow>Куратор</em> по работе <br />
+                с сервисом Pressfeed
               </h2>
               <a class="btn" href="#">Узнать подробнее</a>
             </div>
@@ -120,7 +187,7 @@
               data-aos-easing="linear"
               data-aos-duration="1500"
             >
-              Кому может потребоваться <br />
+              Кому может потребоваться
               <em class="glow-text" data-glow>помощь куратора?</em>
             </h2>
             <div class="professional-cards">
@@ -157,8 +224,7 @@
                   <img src="./aseets/img/other/meeting.png" alt="meeting" />
                   <span
                     >Другим экспертам, чья профессиональная деятельность
-                    напрямую <br />
-                    не связана с PR-продвижением
+                    напрямую не связана с PR-продвижением
                   </span>
                 </li>
               </ul>
@@ -220,8 +286,17 @@
                       </p>
                     </li>
                   </ul>
+                  <h4 class="part__mobile">
+                    Стоимость сопровождения (со скидкой)
+                  </h4>
+                  <div class="function__part part__mobile">
+                    <span class="function__text"
+                      >Без дополнительной стоимости</span
+                    >
+                  </div>
                 </div>
                 <div class="devider vertical"></div>
+                <div class="devider mobile"></div>
                 <div class="function__part">
                   <h3>Куратор</h3>
                   <span class="function__label">Те же функции, плюс:</span>
@@ -262,16 +337,40 @@
                       </p>
                     </li>
                   </ul>
+                  <h4 class="part__mobile">
+                    Стоимость сопровождения (со скидкой)
+                  </h4>
+                  <div class="part__mobile">
+                    <div class="function__rates">
+                      <div class="function__rates__item">
+                        <span class="rate__title">На тарифе «Эксперт»</span>
+                        <span class="rate__price"
+                          >+ <s>4990</s>
+                          <em class="glow-text" data-glow>2990 ₽/мес.</em></span
+                        >
+                      </div>
+                      <div class="function__rates__item">
+                        <span class="rate__title">На тарифе «Компания»</span>
+                        <span class="rate__price"
+                          >+ <s>6990</s>
+                          <em class="glow-text" data-glow>4990 ₽/мес.</em></span
+                        >
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
-              <h3>Стоимость сопровождения (со скидкой)</h3>
-              <div class="function__content__element">
+              <h4 class="part__desktop">
+                Стоимость сопровождения (со скидкой)
+              </h4>
+              <div class="function__content__element part__desktop">
                 <div class="function__part">
                   <span class="function__text"
                     >Без дополнительной стоимости</span
                   >
                 </div>
                 <div class="devider vertical"></div>
+                <div class="devider mobile"></div>
                 <div class="function__part">
                   <div class="function__rates">
                     <div class="function__rates__item">
@@ -308,7 +407,7 @@
               с куратором
             </h2>
             <ul class="benefits__list">
-              <li data-aos="fade-down-right" class="benefits__item">
+              <li data-aos="fade-right" class="benefits__item">
                 <span class="benefits__item__count">01.</span>
                 <div class="devider"></div>
                 <p class="benefits__item__descr">
@@ -316,7 +415,7 @@
                   на Pressfeed под ваши задачи
                 </p>
               </li>
-              <li data-aos="fade-down-right" class="benefits__item">
+              <li data-aos="fade-left" class="benefits__item">
                 <span class="benefits__item__count">02.</span>
                 <div class="devider"></div>
                 <p class="benefits__item__descr">
@@ -324,7 +423,7 @@
                   публикаций – куратор заранее всё уточнит
                 </p>
               </li>
-              <li data-aos="fade-down-left" class="benefits__item">
+              <li data-aos="fade-right" class="benefits__item">
                 <span class="benefits__item__count">03.</span>
                 <div class="devider"></div>
                 <p class="benefits__item__descr">
@@ -332,7 +431,7 @@
                   <strong> сможете получать больше публикаций</strong>
                 </p>
               </li>
-              <li data-aos="fade-up-right" class="benefits__item">
+              <li data-aos="fade-left" class="benefits__item">
                 <span class="benefits__item__count">04.</span>
                 <div class="devider"></div>
                 <p class="benefits__item__descr">
@@ -341,7 +440,7 @@
                   публикации
                 </p>
               </li>
-              <li data-aos="fade-down-left" class="benefits__item">
+              <li data-aos="fade-right" class="benefits__item">
                 <span class="benefits__item__count">05.</span>
                 <div class="devider"></div>
                 <p class="benefits__item__descr">
@@ -511,5 +610,61 @@
     }
 
     document.querySelectorAll("[data-glow]").forEach(makeGlow);
+  </script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const burgerMenu = document.querySelector(".burger-menu");
+      const sidebar = document.getElementById("sidebar");
+      const sidebarOverlay = document.getElementById("sidebarOverlay");
+      const sidebarClose = document.getElementById("sidebarClose");
+
+      burgerMenu.addEventListener("click", function () {
+        sidebar.classList.add("active");
+        sidebarOverlay.classList.add("active");
+        document.body.style.overflow = "hidden";
+      });
+
+      sidebarClose.addEventListener("click", function () {
+        closeSidebar();
+      });
+
+      sidebarOverlay.addEventListener("click", function () {
+        closeSidebar();
+      });
+
+      document.querySelectorAll(".sidebar__link").forEach((link) => {
+        link.addEventListener("click", function () {
+          closeSidebar();
+        });
+      });
+
+      document.addEventListener("keydown", function (e) {
+        if (e.key === "Escape" && sidebar.classList.contains("active")) {
+          closeSidebar();
+        }
+      });
+
+      const dropdownBtn = document.querySelector(".sidebar__dropdown-btn");
+      const dropdownContent = document.querySelector(
+        ".sidebar__dropdown-content"
+      );
+
+      if (dropdownBtn && dropdownContent) {
+        dropdownBtn.addEventListener("click", function () {
+          dropdownContent.style.display =
+            dropdownContent.style.display === "block" ? "none" : "block";
+        });
+      }
+
+      function closeSidebar() {
+        sidebar.classList.remove("active");
+        sidebarOverlay.classList.remove("active");
+        document.body.style.overflow = "";
+
+        if (dropdownContent) {
+          dropdownContent.style.display = "none";
+        }
+      }
+    });
   </script>
 </html>
